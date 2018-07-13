@@ -1,0 +1,38 @@
+body {
+    background-color: purple;
+    color: orange;
+    width: 300px;
+    margin: auto;
+    align: center;
+    padding: 0;
+}
+
+body h1 {
+    text-align: center;
+}
+
+.HYU {
+    color: lightgreen;
+    text-shadow: 5px  5px 2px blue;
+}
+
+button {
+    padding: 5px 20px;
+    background-color: green;
+    border-color: black;
+    border-style: none;
+    color: yellow;
+}
+
+input {
+    height: 20px;
+}
+
+
+.toggler { width: 500px; height: 200px; position: relative; }
+#effect { width: 240px; height: 180px; padding: 0.4em; position: relative; margin-top: 27px; background: #fff; }
+#effect > h3 { margin: 0; padding: 0.4em; text-align: center; }
+
+#label {
+    height: 20px;
+}
