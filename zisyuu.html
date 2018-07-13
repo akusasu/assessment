@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="zisyuu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>akusasuが作った占いゲーム</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      var state = true;
+      $( "#button" ).on( "click", function() {
+        if ( state ) {
+          $( "#effect" ).animate({
+            backgroundColor: "#aa0000",
+            color: "#fff",
+            width: 300
+          }, 1000 );
+        } else {
+          $( "#effect" ).animate({
+            backgroundColor: "#fff",
+            color: "#000",
+            width: 240
+          }, 1000 );
+        }
+        state = !state;
+      });
+    } );
+    </script>
+
+    <script>
+        $( function() {      
+          $( "#rty-name" ).selectmenu({
+            width: 150
+            })
+            .selectmenu()
+            .selectmenu( "menuWidget" )
+              .addClass( "overflow" );
+       
+          $( "#salutation" ).selectmenu();
+        } );
+        </script>
+
+</head>
+<body>
+    <h1 class="HYU">占いしてみるかい？</h1>
+    <div class="demo">
+ 
+            <form action="#">
+                <label for="rty-name">あなたの12星座</label>
+                <select name="rty-name" id="rty-name">
+                        <option>おひつじ座</option>
+                        <option>おうし座</option>
+                        <option>ふたご座</option>
+                        <option>かに座</option>
+                        <option>しし座</option>
+                        <option>おとめ座</option>
+                        <option>てんびん座</option>
+                        <option>さそり座</option>
+                        <option>いて座</option>
+                        <option>やぎ座</option>
+                        <option>みずがめ座</option>
+                        <option>うお座</option>
+                                    
+                </select>
+            </form>
+             
+            </div>
+ 
+            <div class="toggler">
+                    <div id="effect" class="ui-widget-content ui-corner-all">
+                      <h3 class="ui-widget-header ui-corner-all">十二星座とは？</h3>
+                      <p>
+                            これらの12星座は、メソポタミア起源で、てんびん座を除けばすべてシュメール時代までさかのぼることができる。その後、惑星（太陽や月も含む）
+                     </p>
+                    </div>
+                  </div>
+                   
+                  <button id="button" class="ui-state-default ui-corner-all">広げて見る</button>
+
+    <p>占いしたい名前を入れてくれるかい？</p>
+    <input type="text" id="user-name" size="30" maxlength="20">
+    <button id="assessment">占いする<i class="fas fa-thumbs-up" date-fa-mask="fas fa-thumbs-up" data-fa-transform="shrink-10"></i></button>
+    <div id="result-area"></div>
+    <div id="tweet-area">
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+    </div>                
+    <script src="zisyuu.js"></script>
+</body>
+</html>
